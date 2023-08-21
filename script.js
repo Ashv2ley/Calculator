@@ -19,8 +19,7 @@ class Calculator {
 
     appendNumber(number){
         if (number ==='.' && this.currOperand.includes('.')) return;
-        if (this.round === true && this.prevOperand !== ''){this.currOperand = number; this.round = false; return;}
-        else if (this.round === true && this.prevOperand === ''){this.currOperand = number; this.round = false; return;}
+        if (this.round === true){this.currOperand = number; this.round = false; return;}
         this.currOperand = this.currOperand + number.toString();
     }
 
